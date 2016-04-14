@@ -2,12 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
+		<meta name="Neil Hoang" content="content">
     <link rel="stylesheet" type="text/css" href="styleSheet.css">
+		<script type="text/javascript" src="formvalidation.js">
+
+		</script>
     <title>Basic HTML Form</title>
   </head>
   <body>
     <table align="center">
-      <form action="index.html" method="post">
+      <form id="contactForm" onsubmit="checkempty()" action="#" method="post"   >
         <thead>
           <tr>
             <th scope="col" colspan="2">
@@ -18,14 +22,14 @@
         <tbody>
           <tr>
             <td>Name</td>
-            <td><input type="text" name="name" value=""></td>
+            <td><input type="text" name="name" placeholder="Your Name" id="name">*</td>
           </tr>
           <tr>
             <td>
               Company
             </td>
             <td>
-              <input type="text" name="company" value="">
+              <input type="text" name="company" placeholder="Company" id="company">
             </td>
           </tr>
           <tr>
@@ -33,7 +37,7 @@
               Email
             </td>
             <td>
-              <input type="email" name="email-address" value="">
+              <input type="email" name="email-address" placeholder="Email-Address" id="email">*
             </td>
           </tr>
             <tr>
@@ -41,7 +45,7 @@
                 Telephone
               </td>
               <td>
-                <input type="tel" name="phone-number" value="">
+                <input type="tel" name="phone-number" placeholder="Phone Number" id="phoneNumber">
               </td>
             </tr>
 						<tr>
@@ -49,7 +53,7 @@
 								Website
 							</td>
 							<td>
-								<input type="website" name="website" value="">
+								<input type="website" name="website" placeholder="Website" id="website">*
 							</td>
 
 						</tr>
@@ -57,15 +61,16 @@
         <tfoot>
           <tr>
             <td>
-              <button type="button" name="submit">Submit Contact Details</button>
+              <input type="submit" value="Submit Contact Details">
             </td>
             <td>
-              <button type="button" name="submit">clear</button>
+              <input type="reset" value="Clear">
             </td>
           </tr>
         </tfoot>
 
       </form>
     </table>
+		<h3>* Required Fields</h3>
   </body>
 </html>
